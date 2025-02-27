@@ -50,7 +50,7 @@ const Home = () => {
       <div className="bg-gray-800 text-white py-8 mt-12">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-400">
-            &copy; 2023 Shortlet Management System. All rights reserved.
+            &copy; 2025 Shortlet Management System. All rights reserved.
           </p>
         </div>
       </div>
