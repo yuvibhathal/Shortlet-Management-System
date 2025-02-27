@@ -11,6 +11,7 @@ const Sidebar = () => {
         { name: 'Add Booking', path: '/admin/add-booking', icon: assets.add_icon },
         { name: 'Bookings', path: '/admin/view-bookings', icon: assets.my_course_icon },
         { name: 'View Guest', path: '/admin/view-guests', icon: assets.person_tick_icon },
+        { name: 'View Apartments', path: '/admin/view-apartments', icon: assets.person_tick_icon },
       ];
 
 

@@ -1,9 +1,9 @@
+import ViewBookingsComp from "../../components/admin/ViewBookingsComp";
+
 
 const ViewBookings = () => {
   return (
-    <div>
-      ViewBookings Component
-    </div>
+    <ViewBookingsComp/>
   );
 };
 

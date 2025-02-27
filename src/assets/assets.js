@@ -154,3 +154,64 @@ export const bookingsData = [
     }
   ];
   
+
+
+  export const apartmentsData = [
+    {
+      name: "Cozy Suite",
+      rooms: 2,
+      floor: 1,
+      available: "Yes",
+      clean: "Yes",
+      occupied: "No",
+    },
+    {
+      name: "Ivory Pearl",
+      rooms: 3,
+      floor: 2,
+      available: "No",
+      clean: "No",
+      occupied: "Yes",
+    },
+    {
+      name: "Skyline Loft",
+      rooms: 1,
+      floor: 5,
+      available: "Yes",
+      clean: "Yes",
+      occupied: "No",
+    },
+    {
+      name: "Sunset Villa",
+      rooms: 4,
+      floor: 3,
+      available: "No",
+      clean: "Yes",
+      occupied: "Yes",
+    },
+    {
+      name: "Ocean Breeze",
+      rooms: 2,
+      floor: 2,
+      available: "Yes",
+      clean: "Yes",
+      occupied: "No",
+    },
+    {
+      name: "Penthouse Elite",
+      rooms: 5,
+      floor: 10,
+      available: "Yes",
+      clean: "No",
+      occupied: "Yes",
+    },
+  ];
+
+
+  export const guestData = [
+    { name: "John Doe", email: "john@example.com", phone: "123-456-7890", roomNumber: "101" },
+    { name: "Jane Smith", email: "jane@example.com", phone: "987-654-3210", roomNumber: "102" },
+    { name: "Michael Johnson", email: "michael@example.com", phone: "555-123-4567", roomNumber: "103" },
+    { name: "Emily Davis", email: "emily@example.com", phone: "444-567-8901", roomNumber: "104" },
+    { name: "Robert Brown", email: "robert@example.com", phone: "333-678-9012", roomNumber: "105" },
+  ];

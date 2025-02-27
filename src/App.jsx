@@ -8,6 +8,7 @@ import ViewGuest from "./pages/admin/ViewGuest";
 import Unauthorized from "./components/auth/Unauthorized";
 import Admin from './pages/admin/Admin';
 import Navbar from './components/admin/Navbar';
+import ViewApartments from './pages/admin/ViewApartments'
 
 
 
@@ -26,6 +27,7 @@ function App() {
             <Route path='view-bookings' element={ <ViewBookings/>}/>
             <Route path='add-booking' element={ <AddBooking/>}/>
             <Route path='view-guests' element={ <ViewGuest/>}/>
+            <Route path='view-apartments' element={ <ViewApartments/>}/>
       </Route>
 
       <Route path='/unauthorized' element={<Unauthorized/>} />
