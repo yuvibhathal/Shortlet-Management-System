@@ -1,11 +1,10 @@
+import AddBookingComp from "../../components/admin/AddBookingComp";
 
 
 
 const AddBooking = () => {
   return (
-    <div>
-      AddBooking Component
-    </div>
+    <AddBookingComp/>
   );
 };
 
