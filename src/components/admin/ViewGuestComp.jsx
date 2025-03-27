@@ -61,35 +61,39 @@ useEffect(() => {
     }
   };
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-semibold text-center text-gray-700 mb-4">
-        View Guests
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-xl rounded-xl mt-10">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        👥 Guest List
       </h2>
-
+  
       {loading ? (
-        <p className="text-center text-gray-500">Loading bookings...</p>
+        <p className="text-center text-gray-500 animate-pulse">Loading guests...</p>
       ) : bookings.length === 0 ? (
-        <p className="text-center text-gray-500">No bookings available.</p>
+        <p className="text-center text-gray-500">No guests available.</p>
       ) : (
-        <table className="w-full border-collapse border border-gray-300">
-          <thead>
-  <tr className="bg-gray-200">
-    <th className="border p-2">Guest Name</th>
-    <th className="border p-2">Email</th>
-    <th className="border p-2">Phone Number</th>
-  </tr>
-</thead>
-<tbody>
-  {bookings.map((booking) => (
-    <tr key={booking._id} className="text-center">
-      <td className="border p-2">{booking.guestName}</td>
-      <td className="border p-2">{booking.email}</td>
-      <td className="border p-2">{booking.phone}</td>
-      
-    </tr>
-  ))}
-</tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-200 rounded-lg">
+            <thead>
+              <tr className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
+                <th className="py-3 px-6 text-left">Guest Name</th>
+                <th className="py-3 px-6 text-left">Email</th>
+                <th className="py-3 px-6 text-left">Phone</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 text-sm">
+              {bookings.map((booking) => (
+                <tr
+                  key={booking._id}
+                  className="border-b border-gray-200 hover:bg-gray-50 transition-all"
+                >
+                  <td className="py-3 px-6">{booking.guestName}</td>
+                  <td className="py-3 px-6">{booking.email}</td>
+                  <td className="py-3 px-6">{booking.phone}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
     </div>
   );

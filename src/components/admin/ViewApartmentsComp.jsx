@@ -3,40 +3,48 @@ import { AppContext } from "../../context/AppContext";
 
 const ViewApartmentsComp = () => {
   const { allApartments } = useContext(AppContext);
-
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">All Bookings</h2>
+    <div className="max-w-6xl mx-auto p-6 bg-white shadow-xl rounded-xl mt-10">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+        🏘️ All Bookings (Apartments)
+      </h2>
+  
       <div className="overflow-x-auto">
-        <table className="w-full border border-gray-300 shadow-md rounded-lg">
+        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
           <thead>
-            <tr className="bg-gray-200 text-gray-700">
-              <th className="p-3 border">#</th>
-              <th className="p-3 border">Apartment Name</th>
-              <th className="p-3 border">Number of Rooms</th>
-              <th className="p-3 border">Floor</th>
-              <th className="p-3 border">Available</th>
-              <th className="p-3 border">Clean</th>
-              <th className="p-3 border">Occupied</th>
+            <tr className="bg-gray-100 text-gray-700 uppercase text-sm leading-normal">
+              <th className="p-3 text-left border-t rounded-tl-lg">#</th>
+              <th className="p-3 text-left border-t">Apartment Name</th>
+              <th className="p-3 text-center border-t">Rooms</th>
+              <th className="p-3 text-center border-t">Floor</th>
+              <th className="p-3 text-center border-t">Available</th>
+              <th className="p-3 text-center border-t">Clean</th>
+              <th className="p-3 text-center border-t rounded-tr-lg">Occupied</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-gray-700 text-sm">
             {allApartments.length > 0 ? (
               allApartments.map((apartment, index) => (
-                <tr key={index} className="border-b hover:bg-gray-100">
+                <tr
+                  key={index}
+                  className="border-b border-gray-200 hover:bg-gray-50 transition-all"
+                >
                   <td className="p-3 text-center">{index + 1}</td>
                   <td className="p-3">{apartment.name}</td>
-                  <td className="p-3">{apartment.rooms}</td>
-                  <td className="p-3">{apartment.floor}</td>
-                  <td className="p-3">{apartment.available}</td>
-                  <td className="p-3">{apartment.clean}</td>
-                  <td className="p-3">{apartment.occupied}</td>
+                  <td className="p-3 text-center">{apartment.rooms}</td>
+                  <td className="p-3 text-center">{apartment.floor}</td>
+                  <td className="p-3 text-center">{apartment.available}</td>
+                  <td className="p-3 text-center">{apartment.clean}</td>
+                  <td className="p-3 text-center">{apartment.occupied}</td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="p-4 text-center text-gray-500">
-                  No Apartments available.
+                <td
+                  colSpan="7"
+                  className="p-5 text-center text-gray-500 italic"
+                >
+                  No apartments available.
                 </td>
               </tr>
             )}
