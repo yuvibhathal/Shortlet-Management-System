@@ -8,7 +8,7 @@ const AddBookingComp = () => {
     guestName: "",
     email: "",
     phone: "",
-    roomNumber: "",
+    apartment: "",
     checkInDate: "",
     checkOutDate: "",
   });
@@ -35,7 +35,7 @@ const AddBookingComp = () => {
         guestName: "",
         email: "",
         phone: "",
-        roomNumber: "",
+        apartment: "",
         checkInDate: "",
         checkOutDate: "",
       });
@@ -76,15 +76,18 @@ const AddBookingComp = () => {
           required
           className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         />
-        <input
-          type="text"
-          name="roomNumber"
-          placeholder="Room Number"
-          value={formData.roomNumber}
+        <select
+          name="apartment"
+          value={formData.apartment}
           onChange={handleChange}
           required
           className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-        />
+        >
+          <option value="">Select Apartment</option>
+          <option value="Ivory Pearl">Ivory Pearl</option>
+          <option value="Cozy Suites">Cozy Suites</option>
+          <option value="Sunset Villa">Sunset Villa</option>
+        </select>
         <input
           type="date"
           name="checkInDate"

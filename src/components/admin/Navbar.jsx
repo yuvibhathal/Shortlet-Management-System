@@ -14,9 +14,13 @@ const Navbar = () => {
       <div className="hidden md:flex items-center gap-5 text-gray-500">
           <div className="flex items-center gap-5 cursor-pointer">
 
-              <div className="text-primary-100">
+              <div className="text-primary-100 m-">
               <button className='cursor-pointer' onClick={()=>{navigate('/admin')}}>Admin Board</button> |
-               <Link to='/'> Home</Link>
+               <Link to='/'> Home</Link> |
+               <Link to='/admin'> Features</Link>
+               <Link to='/auth'><button className="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                Sign Up
+               </button></Link>
               </div>
           
           </div>
